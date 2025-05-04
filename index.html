@@ -1,110 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Credit Scores and AI</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Credit Scores and AI</title>
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
-            line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
-        header {
-            background-color:#001538;
-            color: #fff;
-        }
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem;
-            flex-wrap: wrap;
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        .navbar h1 {
-            font-size: 1.5rem;
-        }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
-        .nav-links {
-            display: flex;
-            gap: 1rem;
-        }
+    header {
+      background-color: #001538;
+      color: #fff;
+    }
 
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      flex-wrap: wrap;
+    }
 
-        .nav-links a:hover {
-            text-decoration: underline;
-        }
+    .navbar h1 {
+      font-size: 1.5rem;
+    }
 
-        main {
-            flex: 1;
-            padding: 2rem;
-        }
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+    }
 
-        footer {
-            background-color: #001538;
-            color: #ccc;
-            text-align: center;
-            padding: 1rem;
-            font-size: 0.9rem;
-        }
+    .nav-links a {
+      color: #fff;
+      background-color: #003366;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
 
-        @media (max-width: 600px) {
-            .nav-links {
-                flex-direction: column;
-                align-items: flex-start;
-                margin-top: 1rem;
-            }
+    .nav-links a:hover {
+      background-color: #0055aa;
+    }
 
-            main {
-                padding: 1rem;
-            }
-        }
-    </style>
+    main {
+      flex: 1;
+      padding: 2rem;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    section:nth-child(even) {
+      background-color: #e6e6e6;
+      border-radius: 8px;
+    }
+
+    #intro {
+      background-color: #dfe3e8;
+      border-radius: 10px;
+      padding: 6rem 2rem;
+    }
+
+    #intro h2 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      color: #001538;
+    }
+
+    #intro p {
+      font-size: 1.2rem;
+    }
+
+    section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      color: #001538;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    footer {
+      background-color: #001538;
+      color: #ccc;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 1rem;
+      }
+
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      section {
+        padding: 2rem 1rem;
+      }
+
+      #intro {
+        padding: 4rem 1rem;
+      }
+    }
+  </style>
 </head>
-
 <body>
-    <header>
-        <div class="navbar">
-            <h1>Ethics Concerning Ethics Use and AI</h1>
-            <nav class="nav-links">
-                <a href="#">Current Laws</a>
-                <a href="#">Benifits</a>
-                <a href="#">Statistics</a>
-                <a href="#">Lawmakers</a>
-                <a href="#">Users</a>
-            </nav>
-        </div>
-    </header>
+  <header>
+    <div class="navbar">
+      <h1>Ethics Concerning Credit Use and AI</h1>
+      <nav class="nav-links">
+        <a href="#laws">Current Laws</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#statistics">Statistics</a>
+        <a href="#lawmakers">Lawmakers</a>
+        <a href="#users">Users</a>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-        <h2>What do you need to know?</h2>
-        <p>AI has become more and more pervasive in our daily life</p>
-        <p>Find out more about how they can effect you by following the links above!</p>
-    </main>
+  <main>
+    <section id="intro">
+      <h2>What do you need to know?</h2>
+      <p>AI has become more and more pervasive in our daily life.</p>
+      <p>Find out more about how it can affect you by following the links above!</p>
+    </section>
 
-    <footer>
-        &copy; 2025 Graham McFarland, Shen Rothermel, Aaron Thomas Rejimon
-        . All rights reserved.
-    </footer>
+    <section id="laws">
+      <h2>Current Laws</h2>
+      <p>Details about existing laws regulating credit scoring and AI, including the Fair Credit Reporting Act and AI transparency frameworks.</p>
+    </section>
+
+    <section id="benefits">
+      <h2>Benefits</h2>
+      <p>AI can help reduce bias, improve approval efficiency, and personalize financial products for consumers.</p>
+    </section>
+
+    <section id="statistics">
+      <h2>Statistics</h2>
+      <p>As of 2025, over 60% of major credit institutions use AI for scoring. Accuracy and approval rates have improved in multiple sectors.</p>
+    </section>
+
+    <section id="lawmakers">
+      <h2>Lawmakers</h2>
+      <p>Meet the key figures behind AI regulation in finance, including U.S. Senators, the CFPB, and international regulatory bodies.</p>
+    </section>
+
+    <section id="users">
+      <h2>Users</h2>
+      <p>Understanding how consumers are affected by algorithmic decision-making in lending and what they can do to protect themselves.</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; Graham McFarland, Shen Rothermel, Aaron Thomas Rejimon
+    . All rights reserved.
+  </footer>
 </body>
-
 </html>
