@@ -243,6 +243,31 @@
     <section id="crypto">
       <h2>Crypto</h2>
       <p>Want to support us? We accept cryptocurrency as payment! Email for further information.</p>
+      <body>
+        <script
+        src="https://js.crypto.com/sdk?publishable-key=YOUR_PUBLISHABLE_KEY_PLACEHOLDER">
+        </script>
+        <script>
+        cryptopay.Button({
+        createPayment: function(actions) {
+        return actions.payment.create({
+        currency: 'USD',
+        amount: 100,
+        description : 'Help Us Get Lawmakers Interested!',
+        metadata: {
+        size: 'XL',
+        color: 'black'
+        }
+        });
+        },
+        onApprove: function (data, actions) {
+        // Optional: add logic such as browser redirection or check data object content
+        },
+        defaultLang: 'en-US' // Optional: default language for payment page
+        }).render("#pay-button")
+        </script>
+        <div id="pay-button"></div>
+        </body>
     </section>
   </main>
 
